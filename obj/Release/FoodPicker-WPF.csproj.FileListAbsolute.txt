@@ -1,0 +1,15 @@
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\bin\Release\FoodPicker-WPF.exe.config
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\bin\Release\FoodPicker-WPF.exe
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\bin\Release\FoodPicker-WPF.pdb
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\MainWindow.g.cs
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\App.g.cs
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF_MarkupCompile.cache
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF_MarkupCompile.lref
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\MainWindow.baml
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.g.resources
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker_WPF.Properties.Resources.resources
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.csproj.GenerateResource.cache
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.csproj.CoreCompileInputs.cache
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.exe
+C:\Users\dh.cheon\Source\Repos\FoodPicker-WPF\FoodPicker-WPF\obj\Release\FoodPicker-WPF.pdb
