@@ -4,19 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FoodPicker_WPF"
+        xmlns:GoogleMap="clr-namespace:FoodPicker_WPF.Map"
         mc:Ignorable="d"
         Title="FoodPicker" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        
-        <Button x:Name="PickButton" Content="Pick" HorizontalAlignment="Left" Margin="335,251,0,0" VerticalAlignment="Top" Width="75" Click="PickButton_Click"/>
-        <TextBox x:Name="OutputTextBox" HorizontalAlignment="Left" Height="23" Margin="316,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="PromtTextBlock" HorizontalAlignment="Left" Margin="258,20,0,0" TextWrapping="Wrap" Text="Can't decide what to eat? Let me help you!" VerticalAlignment="Top"/>
-        <Button x:Name="AddFoodButton" Content="Add" HorizontalAlignment="Left" Margin="284,297,0,0" VerticalAlignment="Top" Width="75" Click="AddFoodButton_Click"/>
-        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Height="23" Margin="316,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="DeleteFoodButton" Content="Delete" HorizontalAlignment="Left" Margin="385,297,0,0" VerticalAlignment="Top" Width="75" Click="DeleteFoodButton_Click"/>
-        <TextBlock x:Name="InputPromptTextBlock" HorizontalAlignment="Left" Margin="258,176,0,0" TextWrapping="Wrap" Text="Input:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="OutputPromptTextBlock" HorizontalAlignment="Left" Margin="258,78,0,0" TextWrapping="Wrap" Text="Output:" VerticalAlignment="Top"/>
-        <ListBox x:Name="FoodListBox" HorizontalAlignment="Left" Height="239" Margin="506,78,0,0" VerticalAlignment="Top" Width="256"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="256*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Name="mapgroup" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <GoogleMap:MapControl x:Name="MapControl" Zoom="13" MaxZoom="24" MinZoom="1" />
+            </GroupBox>
+        </Grid>
+        <Button x:Name="PickButton" Content="Pick" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="75" Click="PickButton_Click" Grid.Column="1" Height="20"/>
+        <TextBox x:Name="OutputTextBox" HorizontalAlignment="Left" Height="23" Margin="74,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBlock x:Name="PromtTextBlock" HorizontalAlignment="Left" Margin="13,20,0,0" TextWrapping="Wrap" Text="Can't decide what to eat? Let me help you!" VerticalAlignment="Top" Grid.Column="1" Height="32" Width="120"/>
+        <Button x:Name="AddFoodButton" Content="Add" HorizontalAlignment="Left" Margin="1,297,0,0" VerticalAlignment="Top" Width="75" Click="AddFoodButton_Click" Grid.Column="1" Height="20"/>
+        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Height="23" Margin="61,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="DeleteFoodButton" Content="Delete" HorizontalAlignment="Left" Margin="4,297,0,0" VerticalAlignment="Top" Width="75" Click="DeleteFoodButton_Click" Grid.Column="1" Height="20"/>
+        <TextBlock x:Name="InputPromptTextBlock" HorizontalAlignment="Left" Margin="13,176,0,0" TextWrapping="Wrap" Text="Input:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="31"/>
+        <TextBlock x:Name="OutputPromptTextBlock" HorizontalAlignment="Left" Margin="13,78,0,0" TextWrapping="Wrap" Text="Output:" VerticalAlignment="Top" Grid.Column="1" Height="16" Width="41"/>
+        <ListBox x:Name="FoodListBox" HorizontalAlignment="Left" Height="239" Margin="231,78,0,0" VerticalAlignment="Top" Width="256" Grid.Column="1"/>
 
     </Grid>
 </Window>

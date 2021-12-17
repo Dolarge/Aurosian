@@ -1,9 +1,14 @@
-﻿using System;
+﻿using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsPresentation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
-
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace FoodPicker_WPF
 {
@@ -16,9 +21,40 @@ namespace FoodPicker_WPF
         {
             InitializeComponent();
             WriteAndReadFile.ReadFile(FoodListBox);
+            GoogleMapLoad();
 
         }
 
+        private void GoogleMapLoad()
+        {
+            GoogleMapProvider.Instance.ApiKey = "AIzaSyCXJrDpszuNQfMEXKIifx5zYzhSq3Irpyg";
+
+            // config map
+            MapControl.MapProvider = GMapProviders.OpenStreetMap;
+            MapControl.Position = new PointLatLng(37.21051768521115, 127.08985487358365);
+            MapControl.MinZoom = 2;
+            MapControl.MaxZoom = 17;
+            MapControl.Zoom = 13;
+            MapControl.ShowCenter = false;
+            MapControl.DragButton = MouseButton.Left;
+            MapControl.Position = new PointLatLng(37.21051768521115, 127.08985487358365);
+            
+            MapControl.MouseLeftButtonDown += new MouseButtonEventHandler(mapControl_MouseLeftButtonDown);
+        }
+        void mapControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Point clickPoint = e.GetPosition(MapControl);
+            PointLatLng point = MapControl.FromLocalToLatLng((int)clickPoint.X, (int)clickPoint.Y);
+            GMapMarker marker = new GMapMarker(point);
+            marker.Shape = new Ellipse
+            {
+                Width = 10,
+                Height = 10,
+                Stroke = Brushes.Black,
+                StrokeThickness = 1.5
+            };
+            MapControl.Markers.Add(marker);
+        }
         // saves data accordingly.
         protected override void OnClosing(CancelEventArgs e)
         {
